@@ -1,0 +1,106 @@
+html,
+body {
+    height:100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.center_block {
+    border: 5px solid red;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: .5s;
+}
+.center_block:hover {
+    border: 5px solid orange;
+}
+.ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 1px solid orange;
+    animation: angle 5s linear infinite;
+}
+
+.dott {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: red;
+}
+
+
+.start {
+    animation: start 1s forwards;
+}
+.end {
+    animation: end 1s forwards;
+}
+
+@keyframes angle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes start {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes end {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.left    {
+    position: absolute;
+    left: 200px;
+    height: 100vh;
+    width: 5px;
+    background-color: red;
+}
+.right {
+    position: absolute;
+    left: 800px;
+    height: 100vh;
+    width: 5px;
+    background-color: red;
+}
+
+.top {
+    width: 100vw;
+    position: absolute;
+    top: 340px;
+    background-color: green;
+    height: 5px;
+}
+.bottom {
+    width: 100vw;
+    position: absolute;
+    top: 460px;
+    background-color: green;
+    height: 5px;
+}
